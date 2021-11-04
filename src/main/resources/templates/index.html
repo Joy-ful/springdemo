@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #main {
+            width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            border-radius: 20px;
+            border: 10px solid lightsteelblue;
+            text-align: center;
+        }
+
+        p {
+            font-size: 25px;
+            padding: 10px;
+        }
+
+        input {
+            width: 250px;
+            border-radius: 3px;
+            height: 20px;
+            font-size: 25px;
+            padding: 3px;
+        }
+
+        button {
+            width: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<!--<div id="main">
+    <form action="login" method="post">
+        &lt;!&ndash;name值对应后台Controller中接收的变量&ndash;&gt;
+        <p>账号：<input type="text" name="username" placeholder="账号"></p>
+        <p>密码：<input type="password" name="password" placeholder="密码"></p>
+        <p><button type="submit">登录</button></p>
+    </form>
+</div>-->
+<h1>单文件</h1>
+<form class="form-signin" th:action="@{/SingleFile/upload}" method="post" enctype="multipart/form-data">
+    <p><input type="file" name="myfile"/></p>
+    <p><input type="submit" value="上传"/></p>
+    <!--/*@thymesVar id="result_singlefile" type="aix"*/-->
+    <p style="color: red" th:text="${result_singlefile}" th:if="${not #strings.isEmpty(result_singlefile)}"></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,8 @@
+           "--class", "SequenceFileJava",
+                "--master", "spark://10.10.13.180:7077",
+                "--deploy-mode", "cluster",
+                "--name", "upload_spark",
+                "--supervise", "false",
+                "--executor-memory", "2G",
+                "--total-executor-cores", "5",
+                "--spark.jars","/software/spark_test-1.0-SNAPSHOT.jar"

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org"></html>
+<head>
+    <meta charset="UTF-8">
+    <title>搞事情啊！！！</title>
+</head>
+<body>
+<h1>搞事情啊！！！</h1>
+
+<form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+    姓名：<input type="text" name="name"/><br/>
+    <!-- 切记，这里的name="multipartFile"必须和控制层的参数一致性MultipartFile multipartFile -->
+    照片：<input type="file" name="multipartFile"/><br/>
+    <input type="submit" value="上传"/><br/>
+</form>
+
+</body>
+</html>
